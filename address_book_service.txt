@@ -1,4 +1,4 @@
-mysql> create database address_book_service
+mysql> create database address_book_service;
 mysql> use address_book_service
 Database changed
 

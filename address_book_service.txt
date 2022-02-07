@@ -118,3 +118,23 @@ mysql> select * from address_book order by first_name;
 +----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+
 3 rows in set (0.00 sec)
 
+mysql> alter table address_book ADD type VARCHAR(200) not null after email;
+Query OK, 0 rows affected (0.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc address_book;
++--------------+------------------+------+-----+---------+----------------+
+| Field        | Type             | Null | Key | Default | Extra          |
++--------------+------------------+------+-----+---------+----------------+
+| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| first_name   | varchar(200)     | NO   |     | NULL    |                |
+| last_name    | varchar(200)     | NO   |     | NULL    |                |
+| address      | varchar(200)     | NO   |     | NULL    |                |
+| city         | varchar(200)     | NO   |     | NULL    |                |
+| state        | varchar(200)     | NO   |     | NULL    |                |
+| zip          | varchar(200)     | NO   |     | NULL    |                |
+| phone_number | varchar(200)     | NO   |     | NULL    |                |
+| email        | varchar(200)     | NO   |     | NULL    |                |
+| type| varchar(200)     | NO   |     | NULL    |                |
++--------------+------------------+------+-----+---------+----------------+
+10 rows in set (0.00 sec)

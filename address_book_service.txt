@@ -51,3 +51,7 @@ mysql> select * from address_book;
 +----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
 2 rows in set (0.00 sec)
 
+mysql> update address_book set zip='297664' where first_name = 'Atul';
+Query OK, 1 row affected (0.15 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+

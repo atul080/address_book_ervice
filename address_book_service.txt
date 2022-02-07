@@ -55,3 +55,22 @@ mysql> update address_book set zip='297664' where first_name = 'Atul';
 Query OK, 1 row affected (0.15 sec)
 Rows matched: 1  Changed: 1  Warnings: 0
 
+mysql> select * from address_book;
++----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
+| id | first_name | last_name | address       | city      | state | zip    | phone_number | email          |
++----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP   | Gorakhpur | UP    | 297664 | 9898097656   | atul@tcs.com   |
+|  2 | mohit      | Singh     | RN road,Noida | Noida     | UP    | 205674 | 7398097689   | mohit@bl.co.in |
++----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
+2 rows in set (0.00 sec)
+
+mysql> delete from address_book where first_name='mohit';
+Query OK, 1 row affected (0.23 sec)
+
+mysql> select * from address_book;
++----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+
+| id | first_name | last_name | address     | city      | state | zip    | phone_number | email        |
++----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP | Gorakhpur | UP    | 297664 | 9898097656   | atul@tcs.com |
++----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+
+1 row in set (0.00 sec)

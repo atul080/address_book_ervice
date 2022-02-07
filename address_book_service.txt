@@ -183,3 +183,22 @@ mysql> select count(type) from address_book;
 +-------------------+
 1 row in set (0.00 sec)
 
+mysql> insert into address_book(first_name,last_name,address,city,state,zip,phone_number,email,type) values ('Suresh','Singh','HNo98,Ahmdabad','Ahmedabad','Gujarat','205674','8698097689','suresh@co.in','friend');
+Query OK, 1 row affected (0.22 sec)
+
+mysql> insert into address_book(first_name,last_name,address,city,state,zip,phone_number,email,type) values ('Suresh','Prasad','HNo34,Baramati','Pune','Maharashtra','105674','824997689','suresh.p@co.in','family');
+Query OK, 1 row affected (0.17 sec)
+
+select * from address_book;
++----+------------+-----------+-----------------+-----------+-------------+--------+--------------+------------------+------------------+
+| id | first_name | last_name | address         | city      | state       | zip    | phone_number | email            | type             |
++----+------------+-----------+-----------------+-----------+-------------+--------+--------------+------------------+------------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP     | Gorakhpur | UP          | 297664 | 9898097656   | atul@tcs.com     | Developer        |
+|  3 | Rahul      | Singh     | Sanosra,Rajkot  | Rajkot    | Gujarat     | 205674 | 7398097689   | rohit@bl.co.in   |                  |
+|  4 | Manoj      | Sudd      | Wankaner,Rajkot | Rajkot    | Gujarat     | 205674 | 7398097689   | rohit@bl.co.in   | Support Engineer |
+|  5 | Sumit      | kumar     | 123,Bhilwara    | Bhilwara  | Rajathan    | 216674 | 8394097680   | sumit@gmail.com  | friend           |
+|  6 | Tushar     | kumar     | 183,Jaipur      | Jaipur    | Rajathan    | 216644 | 9334097680   | tushar@gmail.com | friend           |
+|  7 | Suresh     | Singh     | HNo98,Ahmdabad  | Ahmedabad | Gujarat     | 205674 | 8698097689   | suresh@co.in     | friend           |
+|  8 | Suresh     | Prasad    | HNo34,Baramati  | Pune      | Maharashtra | 105674 | 824997689    | suresh.p@co.in   | family           |
++----+------------+-----------+-----------------+-----------+-------------+--------+--------------+------------------+------------------+
+7 rows in set (0.00 sec)

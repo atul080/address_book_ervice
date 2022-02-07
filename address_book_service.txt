@@ -35,3 +35,19 @@ mysql> desc address_book;
 | email        | varchar(200)     | NO   |     | NULL    |                |
 +--------------+------------------+------+-----+---------+----------------+
 9 rows in set (0.00 sec)
+
+mysql> insert into address_book(first_name,last_name,address,city,state,zip,phone_number,email) values ('Atul','Srivastav','HNo.123,GKP','Gorakhpur','UP','297634','9898097656','atul@tcs.com');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into address_book(first_name,last_name,address,city,state,zip,phone_number,email) values ('mohit','Singh','RN road,Noida','Noida','UP','205674','7398097689','mohit@bl.co.in');
+Query OK, 1 row affected (0.18 sec)
+
+mysql> select * from address_book;
++----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
+| id | first_name | last_name | address       | city      | state | zip    | phone_number | email          |
++----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP   | Gorakhpur | UP    | 297634 | 9898097656   | atul@tcs.com   |
+|  2 | mohit      | Singh     | RN road,Noida | Noida     | UP    | 205674 | 7398097689   | mohit@bl.co.in |
++----+------------+-----------+---------------+-----------+-------+--------+--------------+----------------+
+2 rows in set (0.00 sec)
+

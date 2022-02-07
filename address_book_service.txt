@@ -175,3 +175,11 @@ mysql> select * from address_book where type='Developer';
 +----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+------------+
 1 row in set (0.00 sec)
 
+mysql> select count(type) from address_book;
++-------------------+
+| count(profession) |
++-------------------+
+|                 3 |
++-------------------+
+1 row in set (0.00 sec)
+

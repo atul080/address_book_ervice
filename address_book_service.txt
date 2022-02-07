@@ -1,2 +1,37 @@
 mysql> create database address_book_service;
-mysql>
+mysql> use address_book_service;
+Database changed
+
+mysql> show tables;
+Empty set (0.08 sec)
+
+mysql> create table address_book
+    -> (
+    -> id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    -> first_name VARCHAR(200) not null,
+    -> last_name VARCHAR(200) not null,
+    -> address VARCHAR(200) not null,
+    -> city VARCHAR(200) not null,
+    -> state VARCHAR(200) not null,
+    -> zip VARCHAR(200) not null,
+    -> phone_number VARCHAR(200) not null,
+    -> email VARCHAR(200) not null,
+    -> PRIMARY KEY (id)
+    -> );
+Query OK, 0 rows affected (0.39 sec)
+
+mysql> desc address_book;
++--------------+------------------+------+-----+---------+----------------+
+| Field        | Type             | Null | Key | Default | Extra          |
++--------------+------------------+------+-----+---------+----------------+
+| id           | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| first_name   | varchar(200)     | NO   |     | NULL    |                |
+| last_name    | varchar(200)     | NO   |     | NULL    |                |
+| address      | varchar(200)     | NO   |     | NULL    |                |
+| city         | varchar(200)     | NO   |     | NULL    |                |
+| state        | varchar(200)     | NO   |     | NULL    |                |
+| zip          | varchar(200)     | NO   |     | NULL    |                |
+| phone_number | varchar(200)     | NO   |     | NULL    |                |
+| email        | varchar(200)     | NO   |     | NULL    |                |
++--------------+------------------+------+-----+---------+----------------+
+9 rows in set (0.00 sec)

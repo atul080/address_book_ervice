@@ -74,3 +74,29 @@ mysql> select * from address_book;
 |  1 | Atul       | Srivastav | HNo.123,GKP | Gorakhpur | UP    | 297664 | 9898097656   | atul@tcs.com |
 +----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+
 1 row in set (0.00 sec)
+
+mysql> insert into address_book(first_name,last_name,address,city,state,zip,phone_number,email) values ('Rahul','Singh','Sanosra,Rajkot','Rajkot','Gujarat','205674','7398097689','rohit@bl.co.in');
+Query OK, 1 row affected (0.15 sec)
+
+mysql> insert into address_book(first_name,last_name,address,city,state,zip,phone_number,email) values ('Manoj','Sudd','Wankaner,Rajkot','Rajkot','Gujarat','205674','7398097689','rohit@bl.co.in');
+Query OK, 1 row affected (0.27 sec)
+
+mysql> select * from address_book;
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+
+| id | first_name | last_name | address         | city      | state   | zip    | phone_number | email          |
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP     | Gorakhpur | UP      | 297664 | 9898097656   | atul@tcs.com   |
+|  3 | Rahul      | Singh     | Sanosra,Rajkot  | Rajkot    | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |
+|  4 | Manoj      | Sudd      | Wankaner,Rajkot | Rajkot    | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from address_book where city='Rajkot';
++----+------------+-----------+-----------------+--------+---------+--------+--------------+----------------+
+| id | first_name | last_name | address         | city   | state   | zip    | phone_number | email          |
++----+------------+-----------+-----------------+--------+---------+--------+--------------+----------------+
+|  3 | Rahul      | Singh     | Sanosra,Rajkot  | Rajkot | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |
+|  4 | Manoj      | Sudd      | Wankaner,Rajkot | Rajkot | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |
++----+------------+-----------+-----------------+--------+---------+--------+--------------+----------------+
+2 rows in set (0.00 sec)
+

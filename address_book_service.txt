@@ -138,3 +138,40 @@ mysql> desc address_book;
 | type| varchar(200)     | NO   |     | NULL    |                |
 +--------------+------------------+------+-----+---------+----------------+
 10 rows in set (0.00 sec)
+
+mysql> update address_book set type='Developer' where first_name='Atul';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from address_book order by first_name;
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+------------+
+| id | first_name | last_name | address         | city      | state   | zip    | phone_number | email          | type |
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP     | Gorakhpur | UP      | 297664 | 9898097656   | atul@tcs.com   | Developer  |
+|  4 | Manoj      | Sudd      | Wankaner,Rajkot | Rajkot    | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |            |
+|  3 | Rahul      | Singh     | Sanosra,Rajkot  | Rajkot    | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |            |
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+------------+
+3 rows in set (0.00 sec)
+
+mysql> update address_book set type='Support Engineer' where first_name='Manoj';
+Query OK, 1 row affected (0.14 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from address_book order by first_name;
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+------------------+
+| id | first_name | last_name | address         | city      | state   | zip    | phone_number | email          | type |
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+------------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP     | Gorakhpur | UP      | 297664 | 9898097656   | atul@tcs.com   | Developer        |
+|  4 | Manoj      | Sudd      | Wankaner,Rajkot | Rajkot    | Gujarat | 205674 | 7398097689   | rohit@bl.co.in | Support Engineer |
+|  3 | Rahul      | Singh     | Sanosra,Rajkot  | Rajkot    | Gujarat | 205674 | 7398097689   | rohit@bl.co.in |                  |
++----+------------+-----------+-----------------+-----------+---------+--------+--------------+----------------+------------------+
+3 rows in set (0.00 sec)
+
+mysql> select * from address_book where type='Developer';
++----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+------------+
+| id | first_name | last_name | address     | city      | state | zip    | phone_number | email        | type |
++----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+------------+
+|  1 | Atul       | Srivastav | HNo.123,GKP | Gorakhpur | UP    | 297664 | 9898097656   | atul@tcs.com | Developer  |
++----+------------+-----------+-------------+-----------+-------+--------+--------------+--------------+------------+
+1 row in set (0.00 sec)
+
